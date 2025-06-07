@@ -9,9 +9,30 @@ require("dotenv").config();
 
 const app = express();
 
+// CORS configuration
+const corsOptions = {
+  origin: [
+    "http://localhost:5173",
+    "http://127.0.0.1:5173",
+    // Add other allowed origins as needed
+    // "https://yourdomain.com"
+  ],
+  methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
+  allowedHeaders: [
+    "Origin",
+    "X-Requested-With", 
+    "Content-Type", 
+    "Accept", 
+    "Authorization",
+    "Cache-Control"
+  ],
+  credentials: true, // Allow cookies if needed
+  optionsSuccessStatus: 200 // Some legacy browsers (IE11, various SmartTVs) choke on 204
+};
+
 // Middleware
 app.use(express.json());
-app.use(cors());
+app.use(cors(corsOptions));
 
 // Rate limiting
 const limiter = rateLimit({
