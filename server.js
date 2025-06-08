@@ -14,7 +14,7 @@ const corsOptions = {
   origin: [
     "http://localhost:5173",
     "http://127.0.0.1:5173",
-    "https://hr-360-staff.netlify.app/",
+    "https://hr-360-staff.netlify.app",
     // Add other allowed origins as needed
     // "https://yourdomain.com"
   ],
