@@ -14,20 +14,21 @@ const corsOptions = {
   origin: [
     "http://localhost:5173",
     "http://127.0.0.1:5173",
+    "https://hr-360-staff.netlify.app/",
     // Add other allowed origins as needed
     // "https://yourdomain.com"
   ],
   methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
   allowedHeaders: [
     "Origin",
-    "X-Requested-With", 
-    "Content-Type", 
-    "Accept", 
+    "X-Requested-With",
+    "Content-Type",
+    "Accept",
     "Authorization",
-    "Cache-Control"
+    "Cache-Control",
   ],
   credentials: true, // Allow cookies if needed
-  optionsSuccessStatus: 200 // Some legacy browsers (IE11, various SmartTVs) choke on 204
+  optionsSuccessStatus: 200, // Some legacy browsers (IE11, various SmartTVs) choke on 204
 };
 
 // Middleware
