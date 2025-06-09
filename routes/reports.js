@@ -1,4 +1,3 @@
-// routes/reports.js
 const express = require("express");
 const WeeklyReport = require("../models/WeeklyReport");
 const { auth } = require("../middleware/auth");
